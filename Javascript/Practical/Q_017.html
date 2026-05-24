@@ -1,0 +1,41 @@
+<!-- o Create a digital clock that updates every second using setInterval(). -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="hour">00</span> :
+    <span id="min">00</span> :
+    <span id="sec">00</span>
+
+<script>
+let s = 0;
+let m = 0;
+let h = 0;
+
+setInterval(() => {
+    s++;
+
+    if (s == 60) {
+        s = 0;
+        m++;
+    }
+
+    if (m == 60) {
+        m = 0;
+        h++;
+    }
+
+    document.getElementById("sec").innerHTML = s;
+    document.getElementById("min").innerHTML = m;
+    document.getElementById("hour").innerHTML = h;
+
+}, 1000);
+</script>
+    </script>
+  </body>
+</html>
